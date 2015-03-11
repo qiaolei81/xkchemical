@@ -1,0 +1,6 @@
+env:
+  global:
+    - "FTP_USER=travis"
+    - "FTP_PASSWORD=1QA2ws3ed"
+after_success:
+    "curl --ftp-create-dirs -T . -u $FTP_USER:$FTP_PASSWORD ftp://123.57.15.161"
